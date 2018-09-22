@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "952051592105",
+    "firebase_url": "https://zoohackathon-766ad.firebaseio.com",
+    "project_id": "zoohackathon-766ad",
+    "storage_bucket": "zoohackathon-766ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952051592105:android:4a9f7de70c40f907",
+        "android_client_info": {
+          "package_name": "com.example.kartik_chauhan.zoohackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952051592105-1ekfj6ak33fapto6cvnbe1i7cfp1nm3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kartik_chauhan.zoohackathon",
+            "certificate_hash": "05158a70cd37b8c09fc86b031172dd16bbd9b8d7"
+          }
+        },
+        {
+          "client_id": "952051592105-d2n4bkarqmboa9eq7k763bi89oidcekg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZRQa4xZ9hV1ABffXoiDlxZZWun5-qGkY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952051592105-d2n4bkarqmboa9eq7k763bi89oidcekg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
