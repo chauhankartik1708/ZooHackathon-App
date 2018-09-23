@@ -41,7 +41,7 @@ public class SellerRegisActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser() == null){
-                    startActivity(new Intent(SellerRegisActivity.this,SellerDashboard.class));
+                    startActivity(new Intent(SellerRegisActivity.this,sellerDashBoardActivity.class));
                 }
             }
         };
@@ -128,7 +128,7 @@ public class SellerRegisActivity extends AppCompatActivity {
                                     databaseReference.child("contact").setValue(contacttxt);
                                     databaseReference.child("address").setValue(add);
 
-                                    startActivity(new Intent(SellerRegisActivity.this, SellerDashboard.class));
+                                    startActivity(new Intent(SellerRegisActivity.this, sellerDashBoardActivity.class));
                                     finish();
                                 }
                             }

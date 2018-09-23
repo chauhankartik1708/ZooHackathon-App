@@ -9,15 +9,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.kartik_chauhan.zoohackathon.R;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
 public class AddItemAdapter extends RecyclerView.Adapter<AddItemAdapter.ViewHolder>{
 
     private List<RecyclerItems> listItems;
-    private Context mContext;
+    private ValueEventListener mContext;
 
-    public AddItemAdapter(List<RecyclerItems> listItems, Context mContext) {
+    public AddItemAdapter(List<RecyclerItems> listItems, ValueEventListener mContext) {
         this.listItems = listItems;
         this.mContext = mContext;
     }
@@ -33,10 +34,10 @@ public class AddItemAdapter extends RecyclerView.Adapter<AddItemAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final RecyclerItems item = listItems.get(position);
-        holder.item.setText(item.getItem());
-        holder.price.setText(item.getPrice());
-        holder.desc.setText(item.getDesc());
+        final RecyclerItems items = listItems.get(position);
+        holder.item.setText(items.getItem());
+        holder.price.setText(items.getPrice());
+
     }
 
     @Override
@@ -48,7 +49,7 @@ public class AddItemAdapter extends RecyclerView.Adapter<AddItemAdapter.ViewHold
     {
         public TextView item;
         public TextView price;
-        public TextView desc;
+
 
 
 
@@ -56,7 +57,6 @@ public class AddItemAdapter extends RecyclerView.Adapter<AddItemAdapter.ViewHold
             super(itemView);
             item = itemView.findViewById(R.id.item_name);
             price = itemView.findViewById(R.id.item_price);
-            desc = itemView.findViewById(R.id.item_desc);
         }
     }
 }

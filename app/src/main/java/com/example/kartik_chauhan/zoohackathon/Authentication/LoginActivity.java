@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.kartik_chauhan.zoohackathon.R;
-import com.example.kartik_chauhan.zoohackathon.Seller.SellerDashboard;
 import com.example.kartik_chauhan.zoohackathon.Seller.SellerRegisActivity;
+import com.example.kartik_chauhan.zoohackathon.Seller.sellerDashBoardActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private Boolean exit = false;
 
 
-    private Button regis;
+    private Button regis,forgot;
 
     @Override
     public void onBackPressed() {
@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                startActivity(new Intent(LoginActivity.this,ForgotActivity.class));
             }
         });
 
@@ -121,9 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, SellerDashboard.class);
-                                    startActivity(intent);
-                                    finish();
+                                    startActivity(new Intent(LoginActivity.this,sellerDashBoardActivity.class));
                                 }
                             }
                         });
