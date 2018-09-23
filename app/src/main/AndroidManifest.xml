@@ -20,7 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Authentication.LoginActivity"></activity>
+        <activity android:name=".Authentication.LoginActivity" />
+        <activity android:name=".Authentication.PursellerActivity" />
+        <activity android:name=".Seller.SellerRegisActivity" />
+        <activity
+            android:name=".Seller.SellerDashboard"
+            android:label="@string/title_activity_seller_dashboard"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

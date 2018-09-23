@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.kartik_chauhan.zoohackathon.Authentication.LoginActivity;
+import com.example.kartik_chauhan.zoohackathon.Authentication.PursellerActivity;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -23,7 +24,8 @@ public class SplashScreen extends AppCompatActivity {
 
 
     private final int SPLASH_DISPLAY_LENGTH = 5000;
-
+    private TextView tv;
+    private ImageView iv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,23 +34,28 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
 
-        new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run() {
-                /* Create an Intent that will start the Menu-Activity. */
-                TextView tv;
-                ImageView iv;
-
-                tv = (TextView)findViewById(R.id.slogan);
-                iv = (ImageView)findViewById(R.id.logo);
-                Animation anim = AnimationUtils.loadAnimation(SplashScreen.this,R.anim.transitions);
-                tv.startAnimation(anim);
-                iv.startAnimation(anim);
-                final Intent i = new Intent(SplashScreen.this, LoginActivity.class);
-                startActivity(i);
-                finish();
+        tv = (TextView)findViewById(R.id.slogan);
+        iv = (ImageView)findViewById(R.id.logo);
+        Animation anim = AnimationUtils.loadAnimation(this,R.anim.transitions);
+        tv.startAnimation(anim);
+        iv.startAnimation(anim);
+        final Intent i = new Intent(this, PursellerActivity.class);
+        Thread t = new Thread(){
+            public void run()
+            {
+                try {
+                    sleep(5000);
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    startActivity(i);
+                    finish();
+                }
             }
-        }, SPLASH_DISPLAY_LENGTH);
+        };
+        t.start();
 
     }
 
