@@ -34,7 +34,7 @@ public class AddItemFragment extends Fragment {
     FirebaseAuth mAuth;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference;
-    private List<AddItemAdapter> listItems;
+    private List<RecyclerItems> listItems;
 //    private ProgressBar spinner;
     private LinearLayout pb;
     @Nullable
@@ -74,7 +74,7 @@ public class AddItemFragment extends Fragment {
                         String price = dp.child("Title").getValue(String.class);
                         String desc = dp.child("Description").getValue(String.class);
 
-                        listItems.add(new AddItemAdapter(item,price,desc));
+                        listItems.add(new RecyclerItems(item,price,desc));
                     }
                 }
 

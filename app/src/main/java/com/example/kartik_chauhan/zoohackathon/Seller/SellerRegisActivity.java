@@ -41,7 +41,7 @@ public class SellerRegisActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser() == null){
-                    startActivity(new Intent(SellerRegisActivity.this,AddItemActivity.class));
+                    startActivity(new Intent(SellerRegisActivity.this,SellerDashboard.class));
                 }
             }
         };

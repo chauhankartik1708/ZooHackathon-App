@@ -46,16 +46,16 @@ public class AddItemAdapter extends RecyclerView.Adapter<AddItemAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        public TextView name;
-        public TextView title;
+        public TextView item;
+        public TextView price;
         public TextView desc;
 
 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.item_name);
-            title = itemView.findViewById(R.id.item_price);
+            item = itemView.findViewById(R.id.item_name);
+            price = itemView.findViewById(R.id.item_price);
             desc = itemView.findViewById(R.id.item_desc);
         }
     }
